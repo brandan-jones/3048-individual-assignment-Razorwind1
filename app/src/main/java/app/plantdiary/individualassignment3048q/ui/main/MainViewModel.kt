@@ -14,7 +14,7 @@ class MainViewModel : ViewModel() {
     }
 
     fun fetchCountries() {
-        countries = countryService.fetchCountries("Zambia")
+        countries = countryService.fetchCountries()
     }
-    // TODO: Implement the ViewModel
+
 }

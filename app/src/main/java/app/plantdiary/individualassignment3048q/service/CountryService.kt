@@ -9,8 +9,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class CountryService {
-    fun fetchCountries(countryName: String) : MutableLiveData<ArrayList<Country>> {
-        var _countries = MutableLiveData<ArrayList<Country>>()
+    fun fetchCountries() : MutableLiveData<ArrayList<Country>> {
+        val _countries = MutableLiveData<ArrayList<Country>>()
 
         //This is a Retrofit service (see RetrofitClientInstance.kt)
         val service = RetrofitClientInstance.retrofitInstance?.create(ICountryDAO::class.java)
@@ -35,8 +35,8 @@ class CountryService {
              * occurred creating the request or processing the response.
              */
             override fun onFailure(call: Call<ArrayList<Country>>, t: Throwable) {
-                val j = 1 + 1
-                val i = 1 + 1
+//                val j = 1 + 1
+//                val i = 1 + 1
             }
         })
 

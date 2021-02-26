@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClientInstance {
 
     //private vals
-    private var retrofit: Retrofit? = null;
+    private var retrofit: Retrofit? = null
     private val BASE_URL = "https://pkgstore.datahub.io"
 
     //public vals. Can have getters right here!
@@ -14,7 +14,7 @@ object RetrofitClientInstance {
         get() {
             //has this object been created yet?
             if (retrofit == null) {
-                retrofit = retrofit2.Retrofit.Builder()
+                retrofit = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
